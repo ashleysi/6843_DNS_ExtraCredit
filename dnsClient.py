@@ -176,7 +176,9 @@ def dns_query(type, name, server):
         if type == 1:
             # A record (IPv4 address)
             ipv4 = socket.inet_ntop(socket.AF_INET, rdata)
-            print(f'{name} has IPv4 address {ipv4}')\
+            # Note in the line below, '\' is in the template code
+            print(f'{name} has IPv4 address {ipv4}')\ 
+            # Add this line of space here to remove syntax error 
             return ipv4
         # elif type == ?????: # Lookup Type value
         elif type == 28:
